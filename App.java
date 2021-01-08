@@ -31,12 +31,14 @@ public class App {
           System.out.println("You hide until the car passes. You survived!");
           }
         }
+        // action if player chooses to go right into the forest
         else {
           System.out.println("You branch out toward the forest. Oh no! You fell into a hole! Guess what color I have in mind so I can help you get out. You have three guesses before you die of starvation(Green/Yellow/Red/Purple");
           String colorGuess = scanner.next();
+          // correct color to guess in order to live
           String correctColor = "Red";
           
-          
+          // three total chances before it switches the game
           int guesses = 1;
           int totalChance = 3;
           
@@ -45,12 +47,14 @@ public class App {
             System.out.println("Wrong. If you can guess my number then I will save you. Pick a number 1-5.");
             int numberGuess = scanner.nextInt();
             int totalAvailableNumberGuess = 3;
+            // correct number declared for the new game
             int correctNumber = 2;
-            for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop line 40 and it's a nesting loop because it's within the while loop 
+            for (int i = 1; i < totalAvailableNumberGuess; i++) { // for loop and it's a nesting loop because it's within the while loop 
               if (numberGuess == correctNumber) {
             System.out.println("You got it right! You win.");
                  return;
               }
+              // different actions based on the user's final input that shows they either win or lose.
             System.out.println("Wrong again. Please try again.");
             numberGuess = scanner.nextInt();
           }
@@ -59,7 +63,7 @@ public class App {
           guesses ++;
           }
           if (colorGuess.equals(correctColor)){ // if else statement
-          System.out.println("You got it right!");
+          System.out.println("You got it right! You win!");
           }
          else { System.out.println("You died."); 
          return;
