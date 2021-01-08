@@ -1,26 +1,32 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
+      // Ask user if they want to play 
         System.out.println("Adventure Through The Forest");
         System.out.println("Are you ready to start? (Y/N)");
-        Scanner scanner = new Scanner(System.in); // Add static?
+        Scanner scanner = new Scanner(System.in); 
         String readyOrNot = scanner.next();
         if (!readyOrNot.equals("Y")) { // if statement
           System.out.println("OK! Try again when you're ready.");
           return;
         }
+        // Asks user first question
         System.out.println("You reach a fork in the road. To the left is a dimly lit street and to the right is a forest. Which way will you go? (L/R)");
         String option1 = scanner.next();
+        // Left or right
         if (option1.equals("L"))  { // comparing objects
           System.out.println("You head toward the dimly lit road. The lightbulbs flicker as a car starts to come up behind you. Do you keep walking, flag it down, or hide? (W/F/H)");
           String option2 = scanner.next(); 
+          // action if player chooses to keep walking
           if (option2.equals("W")) {
           System.out.println("You continue on down the road and eventually reach the next city. Congrats on your survival.");
           }
+          // action if player chooses to flag it down
           else if (option2.equals ("F")) { // else if statement
           System.out.println("The driver picks you up and you are kidnapped and never seen again. Game over.");
           return;
           }
+          // action if player chooses to hide
           else {
           System.out.println("You hide until the car passes. You survived!");
           }
